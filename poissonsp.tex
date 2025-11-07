@@ -9,8 +9,8 @@ Given an aperiodic BD triple for $SP_{2n}$, our goals:
     \item 'Unfold' the BD triple to a BD triple for $SL_{2n}$.
     \item Let $\Sigma$ be an initial seed in the GSV construction.
     \item Temporarily freeze the cluster variables in $\Sigma$ 
-    that correspond to frozen ones in BFZ to get a new seed $\Sigma\prime$.
-    \item Show that $h^*$ gives a quasi isomorphism (Fraser) from $\Sigma\prime$ 
+    that correspond to frozen ones in BFZ to get a new seed $\Sigma'$.
+    \item Show that $h^*$ gives a quasi isomorphism (Fraser) from $\Sigma'$ 
     to $\Sigma_{BFZ}$. We want to say that $h^*(\Sigma)$ is a product of minors times frozen, 
     the $B$ matrix is the same, and $h^*$ is invertible.
     % Fraser Proposition 3.2 and Lemma 3.7
@@ -24,13 +24,19 @@ Given an aperiodic BD triple for $SP_{2n}$, our goals:
         \item in the standard seed for the foldable word we have both $\Delta_{\mu}^{\lambda}$ and $\Delta_{\mu^*}^{\lambda^*}$ 
     \end{itemize}
     \item observe that $h^*$ and mutations commute so get a foldable seed for the non-standard structure.
-    (Discuss what happens to arrows in between frozen variables.
-    In particular we need to discuss what happens when we unfreze the variables we temporarely froze.)
+      
+      This structure is not yet the one we want: we need to unfreze the variables we temporarely froze.
+      The hard part of this is only discussing the arrows among the variales we unfreze.
+      One option here is to give explicit exchange relations that these variables satisfy in the cluster we have. 
+      
+      Idea for a trick: observe that when evaluating on $g$ these exchange relations can be made to use at most one function for each orbit.
+      Is this enough?
     \item Show that $h^*$ and folding commute, so we get the seed we wanted.
 \end{itemize}
-    \item Show it is regular. \\
-    If we new that folding "works" on the level of cluster algebras, 
-    this would be for free. Alternatively, we use the starfish lemma (which should be easy).
+    \item Show it is regular.
+
+    If we new that folding "works" on the level of cluster algebras, this would be for free. 
+    Alternatively, we use the starfish lemma (which should be easy).
 
     \item Prove that the upper cluster algebra is the whole ring.
     \begin{itemize}
