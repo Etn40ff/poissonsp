@@ -1,12 +1,9 @@
 ._*
-affdominance.pdf
-affdominanceQUESTION.pdf
-affine_dominance.pdf
 *._aux
 *.aux
 *.bbl
 *.blg
-dominance_notes.pdf
+*.pdf
 .DS_*
 *.fdb_latexmk
 *.fls
@@ -16,7 +13,6 @@ dominance_notes.pdf
 *.nlo
 *.nls
 *.out
-scratch.pdf
 *.synctex
 *.synctex.gz
 *.tex.project.vim
