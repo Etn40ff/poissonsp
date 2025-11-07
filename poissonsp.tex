@@ -1,7 +1,50 @@
 \documentclass{article}
 
 \begin{document}
-Hello World!
-first change!
-second change
+Given an aperiodic BD triple for $SP_{2n}$, our goals:
+\begin{enumerate}
+    \item Define a (non standard) cluster structure on $SP_{2n}$.
+    Strategy:
+\begin{itemize}
+    \item 'Unfold' the BD triple to a BD triple for $SL_{2n}$.
+    \item Let $\Sigma$ be an initial seed in the GSV construction.
+    \item Temporarily freeze the cluster variables in $\Sigma$ 
+    that correspond to frozen ones in BFZ to get a new seed $\Sigma\prime$.
+    \item Show that $h^*$ gives a quasi isomorphism (Fraser) from $\Sigma\prime$ 
+    to $\Sigma_{BFZ}$. We want to say that $h^*(\Sigma)$ is a product of minors times frozen, 
+    the $B$ matrix is the same, and $h^*$ is invertible.
+    % Fraser Proposition 3.2 and Lemma 3.7
+    \item In the standard structure we can find a foldable word.
+    We need to define "foldable" under the "star" involution,
+    and then show the following:
+    \begin{itemize}
+        \item folding of the word gives a reduced word for the longest element of $SP_{2n}$.
+        \item we get a generic element $g$ of $SP_{2n}$.
+        \item $\Delta_{\mu}^{\lambda}(g) = \Delta_{\mu^*}^{\lambda^*}(g)$.
+        \item in the standard seed for the foldable word we have both $\Delta_{\mu}^{\lambda}$ and $\Delta_{\mu^*}^{\lambda^*}$ 
+    \end{itemize}
+    \item observe that $h^*$ and mutations commute so get a foldable seed for the non-standard structure.
+    (Discuss what happens to arrows in between frozen variables.
+    In particular we need to discuss what happens when we unfreze the variables we temporarely froze.)
+    \item Show that $h^*$ and folding commute, so we get the seed we wanted.
+\end{itemize}
+    \item Show it is regular. \\
+    If we new that folding "works" on the level of cluster algebras, 
+    this would be for free. Alternatively, we use the starfish lemma (which should be easy).
+
+    \item Prove that the upper cluster algebra is the whole ring.
+    \begin{itemize}
+        \item To show that generators of the ring of coordinates of $SP$ are in the upper cluster algebra, i.e., they are Laurent polynomials
+        in all seeds.
+        \item by GSV (4.17 in "unified approach", see also "plethora") it suffices to show that generators of $SP$ are Laurent polynomials in the initial cluster and its neighbours.
+        \item Observe that these clusters are the folding of $SL$ clusters.
+        \item Each generator of $SP$ is the folding of a generator of $SL$.
+        \item Each generator of $SL$ is a Laurent polynomial in every cluster of $SL$, in particularin the one we need.
+        \item Folding sends Laurent polynomials to Laurent polynomials.
+    \end{itemize}
+\end{enumerate}
+
+
+
+    
 \end{document}
