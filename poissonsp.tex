@@ -1,57 +1,237 @@
-\documentclass{article}
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,hyperref}
+
+\title{Exotic CLuster Structures on $SP_n$}
+\author{Idan Eisner and Salvatore Stella}
+
 
 \begin{document}
-Given an aperiodic BD triple for $SP_{2n}$, our goals:
-\begin{enumerate}
-    \item Define a (non standard) cluster structure on $SP_{2n}$.
-    Strategy:
+\section{Introduction}
+
+Shortly after cluster algebras were first introduced by Fomin and Zelevinsky in~\cite{FZ01},
+Gekhtman, Shapiro and Vainshtein initiated a systematic
+study of the interaction between the combinatorics of cluster mutations and
+the geometry of Poisson brackets~\cite{GSV03}.
+The central notion introduced there is that of a
+Poisson bracket \emph{compatible} with a cluster structure: a
+bracket $\{\cdot,\cdot\}$ on the ambient field of rational functions
+is compatible with a seed $(\mathbf{x},B)$ if the cluster variables
+$x_1,\dots,x_N$ in $\mathbf{x}$ are \emph{log-canonical},
+\[
+  \{x_i,x_j\} = \omega_{ij}\, x_i x_j, \qquad \omega_{ij}\in \mathbb{Z} \text{ or } \mathbb{Q},
+\]
+and the resulting coefficient matrix $\Omega = (c_{ij})$ satisfies
+an explicit linear compatibility relation with the exchange matrix
+$B$ of the seed. When such a compatible pair exists, mutations
+become, up to rescaling, Poisson automorphisms between coordinate
+charts, cluster monomials give privileged log-canonical
+coordinates, and the symplectic foliation of the Poisson variety is
+governed by the combinatorics of frozen and Casimir-type cluster
+variables. This program was carried out in depth in the monograph
+\cite{GSV10}, which remains the standard reference for the subject
+and treats, among other examples, Grassmannians, double Bruhat
+cells, and directed networks from this unified perspective.
+
+The prototypical and best understood family of examples is furnished
+by simple complex Lie groups $\mathcal{G}$ equipped with the
+\emph{standard} (Sklyanin) Poisson--Lie structure. Restricted to a
+double Bruhat cell $\mathcal{G}^{u,v}$, this bracket is compatible,
+in the sense above, with the cluster structure on
+$\mathcal{O}(\mathcal{G}^{u,v})$ constructed by Berenstein, Fomin and
+Zelevinsky out of generalized minors associated to a reduced word
+for the pair $(u,v)$ \cite{BFZ05}; the initial seed is log-canonical,
+and the compatibility persists under mutation to every other seed.
+This result is established uniformly for every simple $\mathcal{G}$ in~\cite{GSV12cluster}.
+
+
+The standard Poisson--Lie bracket is only one member of a much larger family of Poisson structures arising from the classification of Belavin and Drinfeld. 
+In ~\cite{BD82}, Belavin and Drinfeld classified the solutions of the classical Yang--Baxter equation
+on a simple Lie algebra $\mathfrak{g}$. 
+Their classification is given in terms of discrete combinatorial data consisting of two subsets $\Gamma_1,\Gamma_2$ of the set of simple roots of $\mathfrak{g}$ together with an isometry $\gamma:\Gamma_1\to\Gamma_2$. 
+Such a triple is referred to as Belavin--Drinfeld (BD) data.
+
+The trivial BD data, namely $\Gamma_1=\Gamma_2=\emptyset$, correspond to the standard Poisson--Lie bracket, which is compatible with the standard cluster structure introduced in~\cite{BFZ05}. 
+More generally, nontrivial BD data give rise to Poisson brackets that are expected to be compatible with cluster structures different from the standard one. 
+These cluster structures are often referred to as \emph{non-standard} or \emph{exotic}, following the terminology introduced in~\cite{GSV17exotic}.
+
+Motivated by this perspective, Gekhtman, Shapiro, and Vainshtein 
+conjectured in~\cite{GSV12cluster} 
+that every nontrivial Belavin--Drinfeld datum admits a compatible cluster structure on 
+$\mathcal{O}(\mathcal{G})$, generally distinct from the standard cluster structure. 
+Their conjecture establishes a correspondence between Belavin--Drinfeld data and cluster structures on $\mathcal{O}(\mathcal{G})$ and specifies several expected properties of both the correspondence and the resulting cluster structures.
+
+The conjecture has been verified in a number of cases.
+In~\cite{GSV12cluster} it was proved or the trivial BD data for every simple Lie group $\mathcal{G}$
+and for any BD data for $SL_n$ where $n<5$. Shortly after it was found to be true for $SL_5$~\cite{Es14exotic}
+and for minimal size BD data, where $|\Gamma_1|=|\Gamma_2|=1$ on $SL_n$~\cite{Es17exotic01,Es17exotic02}.
+Later on in~\cite{GSV24plethora} it was established for all aperiodic BD data in the case $\mathcal{G}=GL_n$. 
+To the best of our knowledge, however, at the time of writing no examples beyond the $GL_n$ and $SL_n$ cases are known.
+
+\section{Framework and Definitions}
+
+
+\subsection{Cluster algebras of geometric type}
+
+We recall the basic definitions, following Fomin--Zelevinsky
+\cite{FZ01} and Berenstein--Fomin--Zelevinsky \cite{BFZ05}; a
+detailed exposition close to the one used here can also be found in
+\cite{GSV12cluster}.
+
+Let $\mathcal{P}$ be a free multiplicative abelian group of finite
+rank $m$, with generators $g_1,\dots,g_m$, called the
+\emph{coefficient group}, and let $\mathcal{F}$ be the field of
+rational functions in $n$ independent variables over the field of
+fractions of $\mathbb{Z}\mathcal{P}$. A \emph{seed} (of geometric
+type) in $\mathcal{F}$ is a pair $\Sigma = (\mathbf{x},\widetilde{B})$,
+where $\mathbf{x} = (x_1,\dots,x_n)$ is a transcendence basis of
+$\mathcal{F}$ and $\widetilde{B}$ is an $n\times(n+m)$ integer matrix
+whose principal $n\times n$ part $B$ is skew-symmetrizable. We write
+$x_{n+i} = g_i$ for $i\in[m]$, call $\widetilde{\mathbf{x}} =
+(x_1,\dots,x_{n+m})$ the \emph{extended cluster}, its first $n$
+entries the \emph{cluster variables}, and the remaining $m$ entries
+the \emph{stable variables} (sometimes called \emph{frozen variables} or \emph{coefficients}).
+
+Given a seed $\Sigma=(\mathbf{x},\widetilde{B})$ and $k\in[n]$, the
+\emph{mutation in direction $k$} produces a new seed
+$\Sigma_k=(\mathbf{x}_k,\mu_k(\widetilde{B}))$, where
+$\mathbf{x}_k = (\mathbf{x}\setminus\{x_k\})\cup\{x_k'\}$, the new
+cluster variable $x_k'$ is defined by the exchange relation
+\[
+  x_k x_k' \;=\; \prod_{\substack{1\le i\le n+m \\ b_{ki}>0}} x_i^{\,b_{ki}}
+  \;+\; \prod_{\substack{1\le i\le n+m \\ b_{ki}<0}} x_i^{-b_{ki}},
+\]
+and $\mu_k(\widetilde B)$ is the matrix mutation
+\[
+  b'_{ij} =
+  \begin{cases}
+    -b_{ij}, & i=k \text{ or } j=k,\\[2pt]
+    b_{ij} + \dfrac{|b_{ik}|b_{kj}+b_{ik}|b_{kj}|}{2}, & \text{otherwise}.
+  \end{cases}
+\]
+Seed mutation is an involution with $\mu_k(\mu_k(\widetilde B))=\widetilde B$.
+Two seeds are \emph{mutation equivalent} if related by a finite
+sequence of mutations; the set of all seeds mutation equivalent to a
+given one is called a \emph{cluster structure} $\mathcal{C}$ in
+$\mathcal{F}$. The \emph{cluster algebra} $\mathcal{A}(\mathcal{C})$
+is the subring of $\mathcal{F}$ generated by all cluster variables
+occurring in all seeds of $\mathcal{C}$; the \emph{upper cluster
+algebra} $\overline{\mathcal{A}}(\mathcal{C})$ is the intersection,
+over all seeds, of the rings of Laurent polynomials in the
+corresponding extended cluster. By the Laurent phenomenon,
+$\mathcal{A}(\mathcal{C})\subseteq\overline{\mathcal{A}}(\mathcal{C})$.
+A cluster structure $\mathcal{C}$ together with a field isomorphism
+$\varphi:\mathcal{F}\to\mathbb{C}(V)$ for an algebraic variety $V$ is
+called \emph{regular} if $\varphi$ sends every cluster and stable
+variable, in every seed, to a regular function on $V$; when in
+addition $\overline{\mathcal{A}}_{\mathbb C}(\mathcal{C})$ is
+isomorphic to $\mathcal{O}(V)$ via $\varphi$, we say $\mathcal{C}$ is
+a cluster structure \emph{on} $V$.
+
+\subsection{Poisson brackets compatible with a cluster structure}
+
+Let $\{\cdot,\cdot\}$ be a Poisson bracket on the field $\mathcal{F}$
+and $\mathcal{C}$ a cluster structure in $\mathcal{F}$. Following
+Gekhtman--Shapiro--Vainshtein \cite{GSV03}, we say $\{\cdot,\cdot\}$
+and $\mathcal{C}$ are \emph{compatible} if, for every extended
+cluster $\widetilde{\mathbf x}=(x_1,\dots,x_{n+m})$ occurring in
+$\mathcal{C}$ and any pair $i,j\in 1,\ldots,n+m$ there is a constant
+$\omega_{ij}\in\mathbb{Z}$ such that
+\begin{equation}\label{eq:logcanonical}
+  \{x_i,x_j\} = \omega_{ij}\, x_i x_j.
+\end{equation}
+A bracket satisfying \eqref{eq:logcanonical} in a given basis is
+called \emph{log-canonical} in that basis, and the skew-symmetric
+matrix $\Omega^{\widetilde{\mathbf x}} = (\omega_{ij})$ is its
+\emph{coefficient matrix}. A basic result of \cite{GSV03} (see also
+\cite[Ch.~4]{GSV10}) characterizes compatibility linearly: when
+$\operatorname{rank}\widetilde B = n$, a Poisson bracket with
+coefficient matrix $\Omega^{\widetilde{\mathbf x}}$ is compatible
+with $\mathcal{C}=\mathcal{C}(\widetilde B)$ if and only if
+\begin{equation}\label{eq:compatibility}
+  \widetilde{B}\,\Omega^{\widetilde{\mathbf x}} = (D\ \ 0),
+\end{equation}
+for some diagonal matrix $D$. Because \eqref{eq:compatibility}
+transforms correctly under mutation, compatibility need only be
+verified for a single seed of $\mathcal{C}$; it then holds
+automatically for every seed obtained from it by mutation. Under
+compatibility, cluster mutations act as Poisson maps between the
+corresponding coordinate charts (up to rescaling by the exchange
+relation), so that cluster monomials furnish an explicit
+log-canonical coordinate system for
+$(\mathcal{F},\{\cdot,\cdot\})$.
+
+\subsection{Belavin--Drinfeld classification and Sklyanin brackets}
+
+Let $\mathcal G$ be a simple complex Lie group with Lie algebra
+$\mathfrak g$, Cartan subalgebra $\mathfrak h$, root system $\Phi$,
+positive roots $\Phi^+$ and simple roots $\Delta\subset\Phi^+$. A
+\emph{classical $R$-matrix} is an element $r\in\mathfrak
+g\otimes\mathfrak g$ satisfying the classical Yang--Baxter equation
+$[[r,r]]=0$ together with $r+r^{21}=\mathfrak t$, where $\mathfrak
+t\in\mathfrak g\otimes\mathfrak g$ is the Casimir element associated
+to a fixed nondegenerate invariant bilinear form on $\mathfrak g$.
+Given such an $r=\sum_{i,j} r_{ij}I_i\otimes I_j$ in a basis
+$\{I_i\}$ of $\mathfrak g$, the associated \emph{Sklyanin bracket}
+on $\mathcal G$ is
+\begin{equation}\label{eq:sklyanin}
+  \{f_1,f_2\} = \sum_{i,j} r_{ij}\left(
+  \partial_i^R f_1\, \partial_j^R f_2 - \partial_i^L f_1\, \partial_j^L f_2
+  \right),
+\end{equation}
+where $\partial_i^{L},\partial_i^{R}$ denote the left-invariant and
+right-invariant vector fields with value $I_i$ at the identity
+\cite[Prop.~4.1.4]{KS98algebras}. This bracket makes $\mathcal
+G$ into a \emph{Poisson--Lie group}: the multiplication map $\mathcal
+G\times\mathcal G\to\mathcal G$ is Poisson.
+
+Belavin and Drinfeld classified all solutions of the classical
+Yang--Baxter equation on a simple Lie algebra \cite{BD82}. A
+\emph{Belavin--Drinfeld triple} is a triple $T=(\Gamma_1,\Gamma_2,\gamma)$,
+where $\Gamma_1,\Gamma_2\subset\Delta$ and $\gamma:\Gamma_1\to\Gamma_2$
+is an isometry that is \emph{nilpotent}, in the sense that for every
+$\alpha\in\Gamma_1$ there is $m\in\mathbb N$ with $\gamma^j(\alpha)\in
+\Gamma_1$ for $j<m$ but $\gamma^m(\alpha)\notin\Gamma_1$. The map
+$\gamma$ extends to the root systems generated by $\Gamma_1,\Gamma_2$
+and induces a partial order $\alpha\prec_T\beta$ on $\Phi$ whenever
+$\beta=\gamma^j(\alpha)$ for some $j\ge 0$. Up to the action of an
+automorphism $\sigma\otimes\sigma$ of $\mathfrak g\otimes\mathfrak g$,
+every classical $R$-matrix has the form
+\begin{equation}\label{eq:BDform}
+  r \;=\; r_0 \;+\; \sum_{\alpha\in\Phi^+} e_{-\alpha}\otimes e_\alpha
+  \;+\; \sum_{\substack{\alpha\prec_T\beta\\ \alpha,\beta\in\Phi^+}}
+  e_{-\alpha}\wedge e_\beta,
+\end{equation}
+where $r_0\in\mathfrak h\otimes\mathfrak h$ satisfies a linear system
+determined by $T$; the space of such $r_0$ has dimension
+$k_T(k_T-1)/2$, where $k_T=|\Delta\setminus\Gamma_1|$
+\cite[Prop.~3.1]{GSV12cluster}, following the classification in
+\cite{BD82}. More details can be found in~\cite{CP95guide}.
+
+Two $R$-matrices of the form \eqref{eq:BDform} belong to
+the same \emph{Belavin--Drinfeld class} if they share the same
+triple $T$. The \emph{trivial} triple, $\Gamma_1=\Gamma_2=\emptyset$,
+gives $k_T = |\Delta| = \operatorname{rank}\mathcal G$ and recovers
+the \emph{standard} Sklyanin bracket, unique up to the choice of
+$r_0\in\mathfrak h\wedge\mathfrak h$. Any triple with
+$\Gamma_1,\Gamma_2\neq\emptyset$ is called \emph{non-trivial}, and
+the corresponding brackets \emph{non-standard}. The
+\emph{Cremmer--Gervais} triple, with $\Gamma_1=\{\alpha_1,\dots,\alpha_{n-2}\}$,
+$\Gamma_2=\{\alpha_2,\dots,\alpha_{n-1}\}$, $\gamma(\alpha_i)=\alpha_{i+1}$
+in type $A_{n-1}$, is the triple of maximal size with $k_T=1$.
+
 \begin{itemize}
-    \item 'Unfold' the BD triple to a BD triple for $SL_{2n}$.
-    \item Let $\Sigma$ be an initial seed in the GSV construction.
-    \item Temporarily freeze the cluster variables in $\Sigma$ 
-    that correspond to frozen ones in BFZ to get a new seed $\Sigma'$.
-    \item Show that $h^*$ gives a quasi isomorphism (Fraser) from $\Sigma'$ 
-    to $\Sigma_{BFZ}$. We want to say that $h^*(\Sigma)$ is a product of minors times frozen, 
-    the $B$ matrix is the same, and $h^*$ is invertible.
-    % Fraser Proposition 3.2 and Lemma 3.7
-    \item In the standard structure we can find a foldable word.
-    We need to define "foldable" under the "star" involution,
-    and then show the following:
-    \begin{itemize}
-        \item folding of the word gives a reduced word for the longest element of $SP_{2n}$.
-        \item we get a generic element $g$ of $SP_{2n}$.
-        \item $\Delta_{\mu}^{\lambda}(g) = \Delta_{\mu^*}^{\lambda^*}(g)$.
-        \item in the standard seed for the foldable word we have both $\Delta_{\mu}^{\lambda}$ and $\Delta_{\mu^*}^{\lambda^*}$ 
-    \end{itemize}
-    \item observe that $h^*$ and mutations commute so get a foldable seed for the non-standard structure.
-      
-      This structure is not yet the one we want: we need to unfreze the variables we temporarely froze.
-      The hard part of this is only discussing the arrows among the variales we unfreze.
-      One option here is to give explicit exchange relations that these variables satisfy in the cluster we have. 
-      
-      Idea for a trick: observe that when evaluating on $g$ these exchange relations can be made to use at most one function for each orbit.
-      Is this enough?
-    \item Show that $h^*$ and folding commute, so we get the seed we wanted.
+    \item oriented (only for $A_n$ type?)
+    \item  left or right triples (it gives a Poisson bracket but it is no longer Poisson-Lie).
+ Still compatible with the cluster structure
+    \item periodic (aperiodic)
 \end{itemize}
-    \item Show it is regular.
 
-    If we new that folding "works" on the level of cluster algebras, this would be for free. 
-    
-    Alternatively, we use the starfish lemma: folding of regular functions is regular.
-
-    \item Prove that the upper cluster algebra is the whole ring.
-    \begin{itemize}
-        \item To show that generators of the ring of coordinates of $SP$ are in the upper cluster algebra, i.e., they are Laurent polynomials
-        in all seeds.
-        \item by GSV (4.17 in "unified approach", see also "plethora") it suffices to show that generators of $SP$ are Laurent polynomials in the initial cluster and its neighbours.
-        \item Observe that these clusters are the folding of $SL$ clusters.
-        \item Each generator of $SP$ is the folding of a generator of $SL$.
-        \item Each generator of $SL$ is a Laurent polynomial in every cluster of $SL$, in particularin the one we need.
-        \item Folding sends Laurent polynomials to Laurent polynomials.
-    \end{itemize}
-\end{enumerate}
+\subsection{The GSV Conjecture}
+describe the conjecture
+explain what was proved and what is still open (non simply-laced? anything that is not $A_n$)
 
 
+\bibliographystyle{plain}
+\bibliography{ref}
 
-    
 \end{document}
