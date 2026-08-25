@@ -1,11 +1,12 @@
 \documentclass[11pt]{amsart}
 \usepackage{amsmath,amssymb,amsthm,hyperref}
 
-\title{Exotic CLuster Structures on $SP_n$}
+\title{Exotic Cluster Structures on $SP_{2n}$}
 \author{Idan Eisner and Salvatore Stella}
 
 
 \begin{document}
+\maketitle
 \section{Introduction}
 
 Shortly after cluster algebras were first introduced by Fomin and Zelevinsky in~\cite{FZ01},
@@ -225,19 +226,16 @@ Following~\cite{GSV24plethora} we generalize the definition of the bracket: we u
   \partial_i^R f_1\, \partial_j^R f_2 -
   r^L_{i,j}\partial_i^L f_1\, \partial_j^L f_2.
 \end{equation}
-Note that with this defines a Poisson bracket that is not necessarily Poisson--Lie (unless $r^L = r^R$).
+Note that this defines a Poisson bracket that is not necessarily Poisson--Lie (unless $r^L = r^R$).
 
-
-\begin{itemize}
-    \item oriented (only for $A_n$ type?)
-    \item  left or right triples (it gives a Poisson bracket but it is no longer Poisson-Lie).
- Still compatible with the cluster structure
-    \item periodic (aperiodic)
-\end{itemize}
+This paper will address only \emph{aperiodic} Belavin--Drinfeld triples as defined in~\cite{GSV24plethora}: we define the BD graph as a graph with two copies of the simple roots as numbered vertices $1,\ldots ,n$ in two rows, one above the other. In each row, vertices $i$ and $n+1-i$ are connected by an edge. In addition, for every pair $(\alpha_i,\gamma _r(\alpha_i))$ there is an edge connecting $i$ on the top row to $\gamma _r(i)$ on the bottom row (slightly abusing the notation we write $j=\gamma _r(i)$ wherever $\alpha _j = \gamma _r(\alpha _i)$). A connected component of the BD graph can be a simple path, a cycle, a path with a loop at one end or a path with a loop at both ends. A BD triple is called \emph{aperiodic} every connected component of the corresponding BD graph is either a paths or a path with one loop. Otherwise we say that the BD triple is \emph{periodic}.
 
 \subsection{The GSV Conjecture}
-describe the conjecture
-explain what was proved and what is still open (non simply-laced? anything that is not $A_n$)
+In \cite{GSV24plethora} prove the following theorem:
+% restate the thoerem. In~\cite{GSV24plethora} it is only oriented?
+% one BD-triple vs a pair of two?
+
+%  explain what was proved and what is still open (non simply-laced? anything that is not $A_n$)
 
 
 \bibliographystyle{plain}
