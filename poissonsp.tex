@@ -1126,7 +1126,359 @@ Observe that functions that correspond to cells not shaded will be unchanged by 
   The subtlety concerning which arrows to add according to oriented vs. non oriented runs is automatically taken care of by the relative order of virtual bridges.
   From the algebraic point of view it suffices to observe that the functions in $F_\gamma(\bi)$ satisfy~\cite[Theorem 4.4]{GSV23}.
 
-  As the pullback $h^{-1}_*$ commutes with mutations, it is an homomorphism, it is enough to show that the pairs $(Q_\gamma(\bi),\overline F_\gamma(\bi))$, as $\bi$ varies, are related by mutations.
+  For an illustration compare the following with~\cite[Figure 6]{GSV23}.
+
+  \noindent
+  \resizebox{\textwidth}{!}{
+\begin{tikzpicture}
+\draw[thick] (-2.5,1) -- (25.5,1);
+\draw[thick] (-2.5,2) -- (25.5,2);
+\draw[thick] (-2.5,3) -- (25.5,3);
+\draw[thick] (-2.5,4) -- (25.5,4);
+\draw[thick] (-2.5,5) -- (25.5,5);
+\draw[thick] (-2.5,6) -- (25.5,6);
+\draw[thick] (-2.5,7) -- (25.5,7);
+\draw[thick] (1,1) -- (1,2);
+\draw (1,1) circle (0.08);
+\fill (1,2) circle (0.06);
+\draw[thick] (2,2) -- (2,3);
+\draw (2,2) circle (0.08);
+\fill (2,3) circle (0.06);
+\draw[thick] (3,1) -- (3,2);
+\draw (3,1) circle (0.08);
+\fill (3,2) circle (0.06);
+\draw[thick] (3,3) -- (3,4);
+\draw (3,3) circle (0.08);
+\fill (3,4) circle (0.06);
+\draw[thick] (4,2) -- (4,3);
+\draw (4,2) circle (0.08);
+\fill (4,3) circle (0.06);
+\draw[thick] (5,1) -- (5,2);
+\draw (5,1) circle (0.08);
+\fill (5,2) circle (0.06);
+\draw[thick] (4,4) -- (4,5);
+\draw (4,4) circle (0.08);
+\fill (4,5) circle (0.06);
+\draw[thick] (5,3) -- (5,4);
+\draw (5,3) circle (0.08);
+\fill (5,4) circle (0.06);
+\draw[thick] (6,2) -- (6,3);
+\draw (6,2) circle (0.08);
+\fill (6,3) circle (0.06);
+\draw[thick] (7,1) -- (7,2);
+\draw (7,1) circle (0.08);
+\fill (7,2) circle (0.06);
+\draw[thick] (5,5) -- (5,6);
+\draw (5,5) circle (0.08);
+\fill (5,6) circle (0.06);
+\draw[thick] (6,4) -- (6,5);
+\draw (6,4) circle (0.08);
+\fill (6,5) circle (0.06);
+\draw[thick] (7,3) -- (7,4);
+\draw (7,3) circle (0.08);
+\fill (7,4) circle (0.06);
+\draw[thick] (8,2) -- (8,3);
+\draw (8,2) circle (0.08);
+\fill (8,3) circle (0.06);
+\draw[thick] (9,1) -- (9,2);
+\draw (9,1) circle (0.08);
+\fill (9,2) circle (0.06);
+\draw[thick] (6,6) -- (6,7);
+\draw (6,6) circle (0.08);
+\fill (6,7) circle (0.06);
+\draw[thick] (7,5) -- (7,6);
+\draw (7,5) circle (0.08);
+\fill (7,6) circle (0.06);
+\draw[thick] (8,4) -- (8,5);
+\draw (8,4) circle (0.08);
+\fill (8,5) circle (0.06);
+\draw[thick] (9,3) -- (9,4);
+\draw (9,3) circle (0.08);
+\fill (9,4) circle (0.06);
+\draw[thick] (10,2) -- (10,3);
+\draw (10,2) circle (0.08);
+\fill (10,3) circle (0.06);
+\draw[thick] (11,1) -- (11,2);
+\draw (11,1) circle (0.08);
+\fill (11,2) circle (0.06);
+\draw[thick] (12,1) -- (12,2);
+\fill (12,1) circle (0.06);
+\draw (12,2) circle (0.08);
+\draw[thick] (13,2) -- (13,3);
+\fill (13,2) circle (0.06);
+\draw (13,3) circle (0.08);
+\draw[thick] (14,3) -- (14,4);
+\fill (14,3) circle (0.06);
+\draw (14,4) circle (0.08);
+\draw[thick] (15,4) -- (15,5);
+\fill (15,4) circle (0.06);
+\draw (15,5) circle (0.08);
+\draw[thick] (16,5) -- (16,6);
+\fill (16,5) circle (0.06);
+\draw (16,6) circle (0.08);
+\draw[thick] (17,6) -- (17,7);
+\fill (17,6) circle (0.06);
+\draw (17,7) circle (0.08);
+\draw[thick] (14,1) -- (14,2);
+\fill (14,1) circle (0.06);
+\draw (14,2) circle (0.08);
+\draw[thick] (15,2) -- (15,3);
+\fill (15,2) circle (0.06);
+\draw (15,3) circle (0.08);
+\draw[thick] (16,3) -- (16,4);
+\fill (16,3) circle (0.06);
+\draw (16,4) circle (0.08);
+\draw[thick] (17,4) -- (17,5);
+\fill (17,4) circle (0.06);
+\draw (17,5) circle (0.08);
+\draw[thick] (18,5) -- (18,6);
+\fill (18,5) circle (0.06);
+\draw (18,6) circle (0.08);
+\draw[thick] (16,1) -- (16,2);
+\fill (16,1) circle (0.06);
+\draw (16,2) circle (0.08);
+\draw[thick] (17,2) -- (17,3);
+\fill (17,2) circle (0.06);
+\draw (17,3) circle (0.08);
+\draw[thick] (18,3) -- (18,4);
+\fill (18,3) circle (0.06);
+\draw (18,4) circle (0.08);
+\draw[thick] (19,4) -- (19,5);
+\fill (19,4) circle (0.06);
+\draw (19,5) circle (0.08);
+\draw[thick] (18,1) -- (18,2);
+\fill (18,1) circle (0.06);
+\draw (18,2) circle (0.08);
+\draw[thick] (19,2) -- (19,3);
+\fill (19,2) circle (0.06);
+\draw (19,3) circle (0.08);
+\draw[thick] (20,3) -- (20,4);
+\fill (20,3) circle (0.06);
+\draw (20,4) circle (0.08);
+\draw[thick] (20,1) -- (20,2);
+\fill (20,1) circle (0.06);
+\draw (20,2) circle (0.08);
+\draw[thick] (21,2) -- (21,3);
+\fill (21,2) circle (0.06);
+\draw (21,3) circle (0.08);
+\draw[thick] (22,1) -- (22,2);
+\fill (22,1) circle (0.06);
+\draw (22,2) circle (0.08);
+\draw[gray, thick, densely dashed] (-1,6) -- (-1,7);
+\fill[gray] (-1,6) circle (0.06);
+\draw[gray] (-1,7) circle (0.08);
+\draw[gray, thick, densely dashed] (-2,5) -- (-2,6);
+\fill[gray] (-2,5) circle (0.06);
+\draw[gray] (-2,6) circle (0.08);
+\draw[gray, thick, densely dashed] (-1,2) -- (-1,3);
+\fill[gray] (-1,2) circle (0.06);
+\draw[gray] (-1,3) circle (0.08);
+\draw[gray, thick, densely dashed] (25,2) -- (25,3);
+\draw[gray] (25,2) circle (0.08);
+\fill[gray] (25,3) circle (0.06);
+\draw[gray, thick, densely dashed] (24,4) -- (24,5);
+\draw[gray] (24,4) circle (0.08);
+\fill[gray] (24,5) circle (0.06);
+\draw[gray, thick, densely dashed] (25,5) -- (25,6);
+\draw[gray] (25,5) circle (0.08);
+\fill[gray] (25,6) circle (0.06);
+\fill[red, opacity=0.25] (23,5.0) -- (23,4.0) -- (23,4.0) -- (20.0,4.0) -- (20.0,3.0) -- (19.0,3.0) -- (19.0,2.0) -- (18.0,2.0) -- (18.0,1.0) -- (16.0,1.0) -- (16.0,2.0) -- (17.0,2.0) -- (17.0,3.0) -- (18.0,3.0) -- (18.0,4.0) -- (19.0,4.0) -- (19.0,5.0) -- (23,5.0) -- cycle;
+\draw[red, ultra thick] (16,1.0) -- (16,2.0);
+\fill[green, opacity=0.25] (23,4.0) -- (23,3.0) -- (23,3.0) -- (21.0,3.0) -- (21.0,2.0) -- (20.0,2.0) -- (20.0,1.0) -- (18.0,1.0) -- (18.0,2.0) -- (19.0,2.0) -- (19.0,3.0) -- (20.0,3.0) -- (20.0,4.0) -- (23,4.0) -- cycle;
+\draw[green, ultra thick] (18,1.0) -- (18,2.0);
+\fill[blue, opacity=0.25] (23,2.0) -- (23,1.0) -- (23,1.0) -- (22.0,1.0) -- (22.0,2.0) -- (23,2.0) -- cycle;
+\draw[blue, ultra thick] (22,1.0) -- (22,2.0);
+\fill[orange, opacity=0.25] (0.0,3.0) -- (0.0,4.0) -- (0.0,4.0) -- (3.0,4.0) -- (3.0,3.0) -- (4.0,3.0) -- (4.0,2.0) -- (5.0,2.0) -- (5.0,1.0) -- (3.0,1.0) -- (3.0,2.0) -- (2.0,2.0) -- (2.0,3.0) -- (0.0,3.0) -- cycle;
+\draw[orange, ultra thick] (5,1.0) -- (5,2.0);
+\fill[cyan, opacity=0.25] (0.0,4.0) -- (0.0,5.0) -- (0.0,5.0) -- (4.0,5.0) -- (4.0,4.0) -- (5.0,4.0) -- (5.0,3.0) -- (6.0,3.0) -- (6.0,2.0) -- (7.0,2.0) -- (7.0,1.0) -- (5.0,1.0) -- (5.0,2.0) -- (4.0,2.0) -- (4.0,3.0) -- (3.0,3.0) -- (3.0,4.0) -- (0.0,4.0) -- cycle;
+\draw[cyan, ultra thick] (7,1.0) -- (7,2.0);
+\fill[brown, opacity=0.25] (0.0,6.0) -- (0.0,7.0) -- (0.0,7.0) -- (6.0,7.0) -- (6.0,6.0) -- (7.0,6.0) -- (7.0,5.0) -- (8.0,5.0) -- (8.0,4.0) -- (9.0,4.0) -- (9.0,3.0) -- (10.0,3.0) -- (10.0,2.0) -- (11.0,2.0) -- (11.0,1.0) -- (9.0,1.0) -- (9.0,2.0) -- (8.0,2.0) -- (8.0,3.0) -- (7.0,3.0) -- (7.0,4.0) -- (6.0,4.0) -- (6.0,5.0) -- (5.0,5.0) -- (5.0,6.0) -- (0.0,6.0) -- cycle;
+\draw[brown, ultra thick] (11,1.0) -- (11,2.0);
+\tikzset{
+  mutable/.style={{circle, fill=black, minimum size=7pt, inner sep=0pt, outer sep=2pt}},
+  frozen/.style={{rectangle, fill=black, minimum size=7pt, inner sep=0pt, outer sep=2pt}},
+}
+\node[frozen] (dwd0) at (0.5,1.5) {};
+\node[mutable] (dwd1) at (2.0,1.5) {};
+\node[mutable] (dwd2) at (4.0,1.5) {};
+\node[mutable] (dwd3) at (6.0,1.5) {};
+\node[mutable] (dwd4) at (8.0,1.5) {};
+\node[mutable] (dwd5) at (10.0,1.5) {};
+\node[mutable] (dwd6) at (11.5,1.5) {};
+\node[mutable] (dwd7) at (13.0,1.5) {};
+\node[mutable] (dwd8) at (15.0,1.5) {};
+\node[mutable] (dwd9) at (17.0,1.5) {};
+\node[mutable] (dwd10) at (19.0,1.5) {};
+\node[mutable] (dwd11) at (21.0,1.5) {};
+\node[frozen] (dwd12) at (22.5,1.5) {};
+\node[mutable, fill=blue] (dwd13) at (1.0,2.5) {};
+\node[mutable] (dwd14) at (3.0,2.5) {};
+\node[mutable] (dwd15) at (5.0,2.5) {};
+\node[mutable] (dwd16) at (7.0,2.5) {};
+\node[mutable] (dwd17) at (9.0,2.5) {};
+\node[mutable] (dwd18) at (11.5,2.5) {};
+\node[mutable] (dwd19) at (14.0,2.5) {};
+\node[mutable] (dwd20) at (16.0,2.5) {};
+\node[mutable] (dwd21) at (18.0,2.5) {};
+\node[mutable] (dwd22) at (20.0,2.5) {};
+\node[mutable, fill=brown] (dwd23) at (22.0,2.5) {};
+\node[frozen] (dwd24) at (1.5,3.5) {};
+\node[mutable] (dwd25) at (4.0,3.5) {};
+\node[mutable] (dwd26) at (6.0,3.5) {};
+\node[mutable] (dwd27) at (8.0,3.5) {};
+\node[mutable] (dwd28) at (11.5,3.5) {};
+\node[mutable] (dwd29) at (15.0,3.5) {};
+\node[mutable] (dwd30) at (17.0,3.5) {};
+\node[mutable] (dwd31) at (19.0,3.5) {};
+\node[frozen] (dwd32) at (21.5,3.5) {};
+\node[frozen] (dwd33) at (2.0,4.5) {};
+\node[mutable] (dwd34) at (5.0,4.5) {};
+\node[mutable] (dwd35) at (7.0,4.5) {};
+\node[mutable] (dwd36) at (11.5,4.5) {};
+\node[mutable] (dwd37) at (16.0,4.5) {};
+\node[mutable] (dwd38) at (18.0,4.5) {};
+\node[mutable, fill=cyan] (dwd39) at (21.0,4.5) {};
+\node[mutable, fill=green] (dwd40) at (2.5,5.5) {};
+\node[mutable] (dwd41) at (6.0,5.5) {};
+\node[mutable] (dwd42) at (11.5,5.5) {};
+\node[mutable] (dwd43) at (17.0,5.5) {};
+\node[mutable, fill=orange] (dwd44) at (20.5,5.5) {};
+\node[mutable, fill=red] (dwd45) at (3.0,6.5) {};
+\node[mutable] (dwd46) at (11.5,6.5) {};
+\node[frozen] (dwd47) at (20.0,6.5) {};
+\draw[-Stealth, very thick] (dwd1) -- (dwd0);
+\draw[-Stealth, very thick] (dwd14) -- (dwd13);
+\draw[-Stealth, very thick] (dwd2) -- (dwd1);
+\draw[-Stealth, very thick] (dwd25) -- (dwd24);
+\draw[-Stealth, very thick] (dwd15) -- (dwd14);
+\draw[-Stealth, very thick] (dwd3) -- (dwd2);
+\draw[-Stealth, very thick] (dwd34) -- (dwd33);
+\draw[-Stealth, very thick] (dwd26) -- (dwd25);
+\draw[-Stealth, very thick] (dwd16) -- (dwd15);
+\draw[-Stealth, very thick] (dwd4) -- (dwd3);
+\draw[-Stealth, very thick] (dwd41) -- (dwd40);
+\draw[-Stealth, very thick] (dwd35) -- (dwd34);
+\draw[-Stealth, very thick] (dwd27) -- (dwd26);
+\draw[-Stealth, very thick] (dwd17) -- (dwd16);
+\draw[-Stealth, very thick] (dwd5) -- (dwd4);
+\draw[-Stealth, very thick] (dwd46) -- (dwd45);
+\draw[-Stealth, very thick] (dwd42) -- (dwd41);
+\draw[-Stealth, very thick] (dwd36) -- (dwd35);
+\draw[-Stealth, very thick] (dwd28) -- (dwd27);
+\draw[-Stealth, very thick] (dwd18) -- (dwd17);
+\draw[-Stealth, very thick] (dwd6) -- (dwd5);
+\draw[-Stealth, very thick] (dwd6) -- (dwd7);
+\draw[-Stealth, very thick] (dwd18) -- (dwd19);
+\draw[-Stealth, very thick] (dwd28) -- (dwd29);
+\draw[-Stealth, very thick] (dwd36) -- (dwd37);
+\draw[-Stealth, very thick] (dwd42) -- (dwd43);
+\draw[-Stealth, very thick] (dwd46) -- (dwd47);
+\draw[-Stealth, very thick] (dwd7) -- (dwd8);
+\draw[-Stealth, very thick] (dwd19) -- (dwd20);
+\draw[-Stealth, very thick] (dwd29) -- (dwd30);
+\draw[-Stealth, very thick] (dwd37) -- (dwd38);
+\draw[-Stealth, very thick] (dwd43) -- (dwd44);
+\draw[-Stealth, very thick] (dwd8) -- (dwd9);
+\draw[-Stealth, very thick] (dwd20) -- (dwd21);
+\draw[-Stealth, very thick] (dwd30) -- (dwd31);
+\draw[-Stealth, very thick] (dwd38) -- (dwd39);
+\draw[-Stealth, very thick] (dwd9) -- (dwd10);
+\draw[-Stealth, very thick] (dwd21) -- (dwd22);
+\draw[-Stealth, very thick] (dwd31) -- (dwd32);
+\draw[-Stealth, very thick] (dwd10) -- (dwd11);
+\draw[-Stealth, very thick] (dwd22) -- (dwd23);
+\draw[-Stealth, very thick] (dwd11) -- (dwd12);
+\draw[-Stealth, very thick] (dwd13) .. controls (1.5,2.0) .. (dwd1);
+\draw[-Stealth, very thick] (dwd1) .. controls (2.5,2.0) .. (dwd14);
+\draw[-Stealth, very thick] (dwd14) .. controls (3.5,2.0) .. (dwd2);
+\draw[-Stealth, very thick] (dwd2) .. controls (4.5,2.0) .. (dwd15);
+\draw[-Stealth, very thick] (dwd15) .. controls (5.5,2.0) .. (dwd3);
+\draw[-Stealth, very thick] (dwd3) .. controls (6.5,2.0) .. (dwd16);
+\draw[-Stealth, very thick] (dwd16) .. controls (7.5,2.0) .. (dwd4);
+\draw[-Stealth, very thick] (dwd4) .. controls (8.5,2.0) .. (dwd17);
+\draw[-Stealth, very thick] (dwd17) .. controls (9.5,2.0) .. (dwd5);
+\draw[-Stealth, very thick] (dwd5) .. controls (10.5,2.0) .. (dwd18);
+\draw[-Stealth, very thick] (dwd18) .. controls (11.5,2.0) .. (dwd6);
+\draw[-Stealth, very thick] (dwd7) .. controls (12.5,2.0) .. (dwd18);
+\draw[-Stealth, very thick] (dwd19) .. controls (13.5,2.0) .. (dwd7);
+\draw[-Stealth, very thick] (dwd8) .. controls (14.5,2.0) .. (dwd19);
+\draw[-Stealth, very thick] (dwd20) .. controls (15.5,2.0) .. (dwd8);
+\draw[-Stealth, very thick] (dwd9) .. controls (16.5,2.0) .. (dwd20);
+\draw[-Stealth, very thick] (dwd21) .. controls (17.5,2.0) .. (dwd9);
+\draw[-Stealth, very thick] (dwd10) .. controls (18.5,2.0) .. (dwd21);
+\draw[-Stealth, very thick] (dwd22) .. controls (19.5,2.0) .. (dwd10);
+\draw[-Stealth, very thick] (dwd11) .. controls (20.5,2.0) .. (dwd22);
+\draw[-Stealth, very thick] (dwd23) .. controls (21.5,2.0) .. (dwd11);
+\draw[-Stealth, very thick] (dwd13) .. controls (1.0,3.0) .. (dwd24);
+\draw[-Stealth, very thick] (dwd24) .. controls (2.5,3.0) .. (dwd14);
+\draw[-Stealth, very thick] (dwd14) .. controls (3.5,3.0) .. (dwd25);
+\draw[-Stealth, very thick] (dwd25) .. controls (4.5,3.0) .. (dwd15);
+\draw[-Stealth, very thick] (dwd15) .. controls (5.5,3.0) .. (dwd26);
+\draw[-Stealth, very thick] (dwd26) .. controls (6.5,3.0) .. (dwd16);
+\draw[-Stealth, very thick] (dwd16) .. controls (7.5,3.0) .. (dwd27);
+\draw[-Stealth, very thick] (dwd27) .. controls (8.5,3.0) .. (dwd17);
+\draw[-Stealth, very thick] (dwd17) .. controls (9.5,3.0) .. (dwd28);
+\draw[-Stealth, very thick] (dwd28) .. controls (11.5,3.0) .. (dwd18);
+\draw[-Stealth, very thick] (dwd19) .. controls (13.5,3.0) .. (dwd28);
+\draw[-Stealth, very thick] (dwd29) .. controls (14.5,3.0) .. (dwd19);
+\draw[-Stealth, very thick] (dwd20) .. controls (15.5,3.0) .. (dwd29);
+\draw[-Stealth, very thick] (dwd30) .. controls (16.5,3.0) .. (dwd20);
+\draw[-Stealth, very thick] (dwd21) .. controls (17.5,3.0) .. (dwd30);
+\draw[-Stealth, very thick] (dwd31) .. controls (18.5,3.0) .. (dwd21);
+\draw[-Stealth, very thick] (dwd22) .. controls (19.5,3.0) .. (dwd31);
+\draw[-Stealth, very thick] (dwd32) .. controls (20.5,3.0) .. (dwd22);
+\draw[-Stealth, very thick] (dwd23) .. controls (22.0,3.0) .. (dwd32);
+\draw[-Stealth, very thick] (dwd33) .. controls (3.5,4.0) .. (dwd25);
+\draw[-Stealth, very thick] (dwd25) .. controls (4.5,4.0) .. (dwd34);
+\draw[-Stealth, very thick] (dwd34) .. controls (5.5,4.0) .. (dwd26);
+\draw[-Stealth, very thick] (dwd26) .. controls (6.5,4.0) .. (dwd35);
+\draw[-Stealth, very thick] (dwd35) .. controls (7.5,4.0) .. (dwd27);
+\draw[-Stealth, very thick] (dwd27) .. controls (8.5,4.0) .. (dwd36);
+\draw[-Stealth, very thick] (dwd36) .. controls (11.5,4.0) .. (dwd28);
+\draw[-Stealth, very thick] (dwd29) .. controls (14.5,4.0) .. (dwd36);
+\draw[-Stealth, very thick] (dwd37) .. controls (15.5,4.0) .. (dwd29);
+\draw[-Stealth, very thick] (dwd30) .. controls (16.5,4.0) .. (dwd37);
+\draw[-Stealth, very thick] (dwd38) .. controls (17.5,4.0) .. (dwd30);
+\draw[-Stealth, very thick] (dwd31) .. controls (18.5,4.0) .. (dwd38);
+\draw[-Stealth, very thick] (dwd39) .. controls (19.5,4.0) .. (dwd31);
+\draw[-Stealth, very thick] (dwd40) .. controls (4.5,5.0) .. (dwd34);
+\draw[-Stealth, very thick] (dwd34) .. controls (5.5,5.0) .. (dwd41);
+\draw[-Stealth, very thick] (dwd41) .. controls (6.5,5.0) .. (dwd35);
+\draw[-Stealth, very thick] (dwd35) .. controls (7.5,5.0) .. (dwd42);
+\draw[-Stealth, very thick] (dwd42) .. controls (11.5,5.0) .. (dwd36);
+\draw[-Stealth, very thick] (dwd37) .. controls (15.5,5.0) .. (dwd42);
+\draw[-Stealth, very thick] (dwd43) .. controls (16.5,5.0) .. (dwd37);
+\draw[-Stealth, very thick] (dwd38) .. controls (17.5,5.0) .. (dwd43);
+\draw[-Stealth, very thick] (dwd44) .. controls (18.5,5.0) .. (dwd38);
+\draw[-Stealth, very thick] (dwd39) .. controls (21.0,5.0) .. (dwd44);
+\draw[-Stealth, very thick] (dwd45) .. controls (5.5,6.0) .. (dwd41);
+\draw[-Stealth, very thick] (dwd41) .. controls (6.5,6.0) .. (dwd46);
+\draw[-Stealth, very thick] (dwd46) .. controls (11.5,6.0) .. (dwd42);
+\draw[-Stealth, very thick] (dwd43) .. controls (16.5,6.0) .. (dwd46);
+\draw[-Stealth, very thick] (dwd47) .. controls (17.5,6.0) .. (dwd43);
+\draw[-Stealth, very thick] (dwd44) .. controls (20.5,6.0) .. (dwd47);
+\node[mutable, fill=blue, opacity=0.25] (sdwd13) at (22,0.5) {};
+\node[mutable, fill=brown, opacity=0.25] (sdwd23) at (11,0.5) {};
+\node[mutable, fill=cyan, opacity=0.25] (sdwd39) at (7,0.5) {};
+\node[mutable, fill=green, opacity=0.25] (sdwd40) at (18,0.5) {};
+\node[mutable, fill=orange, opacity=0.25] (sdwd44) at (5,0.5) {};
+\node[mutable, fill=red, opacity=0.25] (sdwd45) at (16,0.5) {};
+\draw[-Stealth, very thick] (sdwd45) -- (dwd8);
+\draw[-Stealth, very thick] (dwd9) -- (sdwd45);
+\draw[-Stealth, very thick] (sdwd40) -- (dwd9);
+\draw[-Stealth, very thick] (dwd10) -- (sdwd40);
+\draw[-Stealth, very thick] (sdwd13) -- (dwd11);
+\draw[-Stealth, very thick] (dwd12) -- (sdwd13);
+\draw[-Stealth, very thick] (sdwd44) -- (dwd3);
+\draw[-Stealth, very thick] (dwd2) -- (sdwd44);
+\draw[-Stealth, very thick] (sdwd39) -- (dwd4);
+\draw[-Stealth, very thick] (dwd3) -- (sdwd39);
+\draw[-Stealth, very thick] (sdwd23) -- (dwd6);
+\draw[-Stealth, very thick] (dwd5) -- (sdwd23);
+\end{tikzpicture}
+}
+
+  As the pullback $h^{-1}_*$ is an homomorphism it commutes with mutations; it is therefore enough to show that the pairs $(Q_\gamma(\bi),\overline F_\gamma(\bi))$, as $\bi$ varies, are related by mutations.
   
   Any two double reduced words for $(w_0,w_0)$ are related by a sequence of 
   \begin{itemize}
@@ -1135,10 +1487,14 @@ Observe that functions that correspond to cells not shaded will be unchanged by 
     \item \emph{sign swaps}: replace $i,-i$ by $-i,i$;
     \item \emph{braid moves}: replace $i,i+1,i$ by $i+1,i,i+1$.
   \end{itemize}
-  Commutations and signed commutations do not affect the construction of $(Q_\gamma(\bi),\overline F_\gamma(\bi))$.
-  Indeed it is enough to observe that neither can change the relative order of positive (resp. negative) inversion bridges associated to $i,i+1\in\Gamma_r$ (resp. $\Gamma_c$) as they both involve the $(i+1)$-st positive (res. negative) strand.
+  
+  Commutations and signed commutations do not affect $(Q_\gamma(\bi),\overline F_\gamma(\bi))$.
+  The only non trivial part of this claim is to observe that neither can change the relative order of positive (resp. negative) inversion bridges associated to~$i,i+1\in\Gamma_r$ (resp. $\Gamma_c$).
+  Indeed this is the order in which the $i$-th and~$(i+2)$-nd positive (resp. negative) strands intersect the $(i+1)$-st and this remains unchanged.
 
-  Therefore it sufficies to show that if $\bi$ and $\bi'$ are two reduced words related by a single sign swap or braid move then $(Q_\gamma(\bi),\overline F_\gamma(\bi))$ and $(Q_\gamma(\bi'),\overline F_\gamma(\bi'))$ are related by a single mutation.
+  It remains to show that if $\bi$ and $\bi'$ are two reduced words related by a single sign swap or braid move then $(Q_\gamma(\bi),\overline F_\gamma(\bi))$ and $(Q_\gamma(\bi'),\overline F_\gamma(\bi'))$ are related by a single mutation.
+  We begin by sign swaps.
+  The generic configuration of a sign swap is the following:
 
   \noindent
   \resizebox{\textwidth}{!}{
@@ -1216,6 +1572,15 @@ Observe that functions that correspond to cells not shaded will be unchanged by 
       };
   \end{tikzpicture}
 }
+  In the diagram positive strands are solid and negative strands are dashed. 
+  Exactly one arrow for each non-black color is present (unless $C$ or $D$ are missing).
+  $S$ is a negative tail node, it is present if and only if the negative bridge is an inversion bridge.
+  $T$ is a positive tail node, it is present if and only if the positive bridge is an inversion bridge.
+  By direct inspection the two quiver are the mutation of one another.
+  One easily observes that the vertex being mutated has two neighbours on each side of each strand connected by arrows with opposite orientations.
+  In the absence of inversion bridges this guarantees that both terms in the usual exchange relation are multiplied by the same factors coming from shaded regions.
+  When there is an inversion bridge only one term of the usual exchange relation is multiplied by the corresponding factor; this is offset by the extra arrow in the quiver.
+  Finally if either $C$ or $D$ are missing because we are at the top or at the bottom or the diagram the balance is preserved 
 
   \noindent
   \resizebox{\textwidth}{!}{
