@@ -430,7 +430,7 @@ The associated double wiring diagram is depicted in Figure~\ref{fig:double_wirin
 %  \caption{The double wiring diagram for the running example and its dual quiver.}
 %\end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \resizebox{\textwidth}{!}{
 \begin{tikzpicture}
 \draw[thick] (-2.5,1) -- (14.5,1);
@@ -722,7 +722,7 @@ Denote the resulting quiver by $Q_\gamma(\bi)$.
 %  }
 %\end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \resizebox{\textwidth}{!}{
   \begin{tikzpicture}
   \draw[thick] (-2.5,1) -- (14.5,1);
@@ -985,7 +985,8 @@ Denote the resulting quiver by $Q_\gamma(\bi)$.
 %  }
 %  \caption{The modified double wiring diagram in the case $\gamma_r(1)=4$, $\gamma_r(2)=3$, and $\gamma_c(1)=2$. Note the overlap in between blue and green shadings.}
 %\end{figure}
-\begin{figure}[h]
+  
+\begin{figure}[ht]
   \resizebox{\textwidth}{!}{
   \begin{tikzpicture}
   \draw[thick] (-2.5,1) -- (14.5,1);
@@ -1274,9 +1275,9 @@ Observe that functions that correspond to cells not shaded will be unchanged by 
 \draw[gray, thick, densely dashed] (-1,2) -- (-1,3);
 \fill[gray] (-1,2) circle (0.06);
 \draw[gray] (-1,3) circle (0.08);
-\draw[gray, thick, densely dashed] (25,2) -- (25,3);
-\draw[gray] (25,2) circle (0.08);
-\fill[gray] (25,3) circle (0.06);
+\draw[gray, thick, densely dashed] (24,2) -- (24,3);
+\draw[gray] (24,2) circle (0.08);
+\fill[gray] (24,3) circle (0.06);
 \draw[gray, thick, densely dashed] (24,4) -- (24,5);
 \draw[gray] (24,4) circle (0.08);
 \fill[gray] (24,5) circle (0.06);
@@ -1478,7 +1479,7 @@ Observe that functions that correspond to cells not shaded will be unchanged by 
 \draw[-Stealth, very thick] (dwd5) -- (sdwd23);
 \end{tikzpicture}
 }
-\caption{The modified double wiring diagram and the quiver $Q_\gamma(i)$ for the running example in~\cite{GSV23}}
+\caption{The modified double wiring diagram and the quiver $Q_\gamma(\bi)$ for the running example in~\cite{GSV23}}
 \label{fig:example_GSV23}
 \end{figure}
 
@@ -1644,7 +1645,7 @@ Observe that functions that correspond to cells not shaded will be unchanged by 
         \draw[-Stealth, very thick] (B) -- (X);
         \draw[-Stealth, very thick] (C) -- (B);
         \draw[-Stealth, very thick, cyan] (D) to[bend right=20] (B);
-        \draw[-Stealth, very thick, orange] (A) to[bend left=20] (C);
+        \draw[-Stealth, very thick, orange] (C) to[bend right=20] (A);
         \draw[-Stealth, very thick, densely dashed] (T) -- (X);
         \draw[-Stealth, very thick, densely dashed] (D) to[bend left=20] (T);
         \draw[-Stealth, very thick, densely dashed] (S) to[bend left=20] (A);
@@ -1686,12 +1687,12 @@ Observe that functions that correspond to cells not shaded will be unchanged by 
         \draw[-Stealth, very thick] (Y) -- (B);
         \draw[-Stealth, very thick] (A) -- (D);
         \draw[-Stealth, very thick, cyan] (B) to[bend left=20] (D);
-        \draw[-Stealth, very thick, orange] (C) to[bend right=20] (A);
+        \draw[-Stealth, very thick, orange] (A) to[bend left=20] (C);
         \draw[-Stealth, very thick, densely dashed] (Y) -- (T);
         \draw[-Stealth, very thick, densely dashed] (T) to[bend right=20] (C);
         \draw[-Stealth, very thick, densely dashed] (B) to[bend right=20] (S);
         \draw[-Stealth, very thick, densely dashed] (S) -- (Y);
-        \draw[-Stealth, very thick, densely dashed, magenta] (S) -- (T);
+        \draw[-Stealth, very thick, densely dashed, magenta] (T) -- (S);
       \end{tikzpicture}
       };
   \end{tikzpicture}
