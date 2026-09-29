@@ -1723,7 +1723,28 @@ If furthermore,
 \end{enumerate}
 then we say that $\sigma$ is an admissible automorphism of $B$.
 
+We can now define the folding of an exchange matrix $B$:
+\begin{definition}
+  Given an admissible automorphism $\sigma$ of an exchange matrix $B$, the folding of $B$ with respect to $\sigma$ is the matrix $\pi_\sigma (B)=c_{\bar{i}\bar{j}}$ whose rows and columns are indexed by the orbits of $\sigma$ and whose entries are given by
+  \[
+    c_{\bar{i}\bar{j}}=\sum_{k\in \bar{i}} b_{kj}.
+  \]
+\end{definition}
+It is not hard to verify that $\pi_\sigma(B)$ is skew-symmetrizable and therefore can be an exchange matrix. 
 
+The permutation $\sigma$ also naturally induces an equivalence relation on the cluster variables of a seed $(\mathbf{x},B)$: two cluster variables $x_i$ and $x_j$ are equivalent, denoted $x_i\sim x_j$, if and only if $i$ and $j$ are in the same orbit of $\sigma$.
+The folding of a seed $(\mathbf{x},B)$ with respect to an admissible automorphism $\sigma$ is the seed $(\mathbf{x}_\sigma, \pi_\sigma(B))$ where $\mathbf{x}_\sigma$ is the set of equivalence classes of cluster variables under the relation $\sim$. 
+We say that such a seed (with an exchange matrix $B$ that is symmetric with respect to $\sigma$) is \emph{foldable}. We also refer to the matrix $B$ (or the seed $(\mathbf{x},B)$) as the \emph{unfolding} of $\pi_\sigma(B)$ (or the seed $(\mathbf{x}_\sigma, \pi_\sigma(B))$).
+
+Clearly, the folding can be also applied to the extended exchange matrix $\tilde{B}$ of a seed $(\mathbf{x},\tilde{B})$ and the resulting folded extended exchange matrix $\pi_\sigma(\tilde{B})$ is the extended exchange matrix of the folded seed $(\mathbf{x}_\sigma, \pi_\sigma(B))$.
+
+\begin{lemma}
+  The seed we construct (Maybe give it a name)? is foldable with respect to the admissible automorphism $\sigma$ that sends $i$ to $n+1-i$ for all $i \in [n]$.
+\end{lemma}
+
+\begin{proof}
+  Indeed, we constructed the seedfrom a double reduced word that is symmetric with respect to the permutation $\sigma$. We then applied symmetric operations to the double wiring diagram and the quiver, which preserved the symmetry. (need to extend this explanation).
+\end{proof}
 
 
 
