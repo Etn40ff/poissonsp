@@ -88,7 +88,7 @@
 
 \begin{abstract}
   We modify the seeds of Berenstein, Fomin and Zelevinsky attached to reduced words for $(w_0,w_0)$, for any simply connected simple complex algebraic group and any aperiodic Belavin--Drinfeld pair.
-  In every type, moves of words act on the resulting seeds by mutations. After a change of coordinates introduced by Gekhtman, Shapiro and Vainshtein, the seeds are, for $SL_N$, seeds of the cluster structures of these authors, and for $Sp_{2n}$ they define regular complete cluster structures with the expected properties. This proves the aperiodic version of their conjecture for $Sp_{2n}$, with its uniqueness part in a corrected form.
+  In every type, moves of words act on the resulting seeds by mutations. After a change of coordinates introduced by Gekhtman, Shapiro and Vainshtein, the seeds are, for $SL_N$, seeds of the cluster structures of these authors, and for $Sp_{2n}$ they define regular complete cluster structures with the expected properties. This proves the aperiodic version of their conjecture for $Sp_{2n}$, with its uniqueness part in a refined form.
 \end{abstract}
 \maketitle
 
@@ -97,10 +97,10 @@
 
 Let $\mcG$ be a simply connected simple complex algebraic group of rank $r$.
 Belavin and Drinfeld \cite{BD82} classified the quasitriangular solutions of the classical Yang--Baxter equation on $\mfg=\mathrm{Lie}(\mcG)$ in terms of combinatorial data, which we encode as \emph{BD maps} $\gamma_\bullet:\Gamma_\bullet\to\Gamma$ between subsets of simple roots.
-A pair $\gamma=(\gamma_r,\gamma_c)$ of BD maps, together with some Cartan data $s\in\mcS(\gamma)$, defines a Poisson bracket $\{\cdot,\cdot\}_{\gamma,s}$ on $\mcG$, where $\gamma_r$ and $\gamma_c$ govern the behaviour under left and right multiplication, respectively.
+A pair $\gamma=(\gamma_r,\gamma_c)$ of BD maps, together with some Cartan data $s\in\mcS(\gamma)$, defines a Poisson bracket $\{\cdot,\cdot\}_{\gamma,s}$ on $\mcG$, where $\gamma_r$ and $\gamma_c$ govern the behavior under left and right multiplication, respectively.
 For $\gamma=(0,0)$ and $s=0$ this is the standard Poisson--Lie structure, which is \emph{compatible} with the cluster structure of Berenstein, Fomin and Zelevinsky \cite{BFZ05}, i.e.\ log-canonical with respect to every extended cluster.
 Gekhtman, Shapiro and Vainshtein conjectured \cite[Conjecture~3.2]{GSV11} that every Poisson--Lie structure of this kind is compatible with a regular complete cluster structure on $\mcG$.
-In the setting of pairs \cite{GSV19}, every \emph{aperiodic} pair $\gamma$ should admit a cluster structure $\mcC_\gamma$ on $\mcG$ with the following properties.
+In the setting of pairs \cite{GSV19}, every \emph{aperiodic} pair $\gamma$ (\cref{def: aperiodic}) should admit a cluster structure $\mcC_\gamma$ on $\mcG$ with the following properties.
 \begin{enumerate}[(i)]
   \item The number of frozen variables is $2r-|\Gamma_r|-|\Gamma_c|$, and the exchange matrices have full rank.
   \item $\mcC_\gamma$ is regular and its upper cluster algebra is $\bbC[\mcG]$.
@@ -109,9 +109,9 @@ In the setting of pairs \cite{GSV19}, every \emph{aperiodic} pair $\gamma$ shoul
   \item $\mcC_\gamma$ is compatible with $\{\cdot,\cdot\}_{\gamma,s}$ for every $s\in\mcS(\gamma)$.
   \item The Poisson brackets compatible with $\mcC_\gamma$ are exactly the brackets $c\{\cdot,\cdot\}_{\gamma,s}+\mcV_\Xi$, where $c\in\bbC$, $s\in\mcS(\gamma)$, and $\mcV_\Xi$ is a bivector field built from the infinitesimal action of $\mcH_{\gamma_r}\times\mcH_{\gamma_c}$.
 \end{enumerate}
-Property (v) is stated here in a refined form. In \cite[Theorem~3.3(v)]{GSV19} every compatible bracket is a scalar multiple of a bracket in (iv), that is, of the form above with $\mcV_\Xi=0$; toric bivector fields mixing the row and the column tori give further compatible brackets, already for $SL_2$. The original \cite[Conjecture~3.2(v)]{GSV11} concerns Poisson--Lie brackets; its conclusion holds for those with $c\neq0$, while for $c=0$ some toric brackets are also Poisson--Lie (\cref{rmk: v}).
+Property (v) extends \cite[Conjecture~3.2(v)]{GSV11}, which concerns Poisson--Lie brackets, to all Poisson brackets. For Poisson--Lie brackets, (v) gives the conclusion of \cite[Conjecture~3.2(v)]{GSV11} when $c\neq0$, while for $c=0$ some toric brackets are also Poisson--Lie (\cref{rmk: v}).
 For $\mcG=SL_N$, cluster structures with (i)--(iv) are constructed in \cite[Theorem~3.3]{GSV19} for aperiodic oriented pairs, and cluster structures with (i), (ii) and (iv) in \cite{GSV23} for all aperiodic pairs; the latter also have (iii) and (v) (\cref{thm: A}(c), \cref{thm: uniqueness}). In the latter construction, the initial seed is described by a quiver, and its cluster variables are obtained from standard ones through a rational map $h_\gamma$, defined in \cite{GSV23} for every $\mcG$.
-In this paper we give seeds for every $\mcG$ and every double reduced word, and prove the conjecture for $\mcG=Sp_{2n}$.
+In this paper we give seeds for every $\mcG$ and every double reduced word, and, using the same rational map $h_\gamma$, prove the conjecture for $\mcG=Sp_{2n}$.
 
 \subsection*{Main results}
 For a double reduced word $\bfi$, i.e.\ a reduced word for $(w_0,w_0)$ in $W\times W$, let $\Sigma(\bfi)$ be the seed of \cite[Theorem~2.10]{BFZ05}, whose cluster variables are generalized minors indexed by the chambers of $\bfi$.
@@ -151,7 +151,7 @@ We deduce the properties of $\mcC_\gamma$ from those of the ambient cluster stru
 \Cref{sec: folding} treats the folding of symmetric seeds, \cref{sec: symmetric} shows that the BD word seeds of lifted words are symmetric with the BD word seeds of $\Sp$ as folds, and \cref{sec: main} proves \cref{thm: main}.
 
 \subsection*{Acknowledgments}
-We are grateful to M. Gekhtman, M. Shapiro and A. Vainshtein for suggesting this problem to us and for the many illuminating conversations on the topic in the long years that took us to complete it.
+We are grateful to M. Gekhtman, M. Shapiro and A. Vainshtein for suggesting this problem to us and for the many illuminating conversations on the topic over the long years it took us to complete it.
 
 
 \section{Conventions and the results of Gekhtman, Shapiro and Vainshtein}
@@ -257,7 +257,7 @@ For example, let $\mcG=SL_3$ and $\gamma_\bullet=\{1\to2\}$.
 For $y=\mathrm{diag}(t_1,t_2,t_3)$ the only equation is $t_1/t_2=t_2/t_3$, that is $t_1t_3=t_2^2$. Together with $t_1t_2t_3=1$, this gives $t_2^3=1$.
 So the subgroup is $\{\mathrm{diag}(t,\omega,\omega^2t^{-1})\mid t\in\bbC^*,\ \omega^3=1\}$, which has three components, and $\mcH_{\gamma_\bullet}=\{\mathrm{diag}(t,1,t^{-1})\mid t\in\bbC^*\}$.
 In terms of characters, $\alpha_1-\alpha_2=3(\varpi_1-\varpi_2)$ is not primitive in the weight lattice.
-  Equivalently, the subgroup contains the centre $\{\omega I\mid\omega^3=1\}$ of $SL_3$, on which every root is trivial, and it is the direct product of $\mcH_{\gamma_\bullet}$ and the centre.
+  Equivalently, the subgroup contains the center $\{\omega I\mid\omega^3=1\}$ of $SL_3$, on which every root is trivial, and it is the direct product of $\mcH_{\gamma_\bullet}$ and the center.
 
   Let $\mcS(\gamma_\bullet)\subseteq\mfh\wedge\mfh$ be the set of solutions $s_\bullet$ of
 \begin{equation}
@@ -383,7 +383,7 @@ In this section we define the BD word seeds for every $\mcG$ and prove that move
 \label{sec: words}
 We describe the seeds of \cite[Section~2.2]{BFZ05} in a form in which the two ends of a word play the same role. We need this because the BD word seeds are obtained by adding letters at both ends of a word.
 The translation to the labels of \cite{BFZ05} is given in \cref{prop: BFZ}.
-Readers can follow along using \cref{fig: Sp6 word seed}, ignoring for the moment all the parts in colour.
+Readers can follow along using \cref{fig: Sp6 word seed}, ignoring for the moment all the parts in color.
 
 A \newword{word} is a family $\bfi=(i_j)_{j\in J}$ of \newword{letters} $i_j\in\pm[1,r]$, indexed by a finite non-empty interval $J$ of integers, the \newword{positions}.
   The \newword{level} of $i_j$ is $|i_j|$, and $\varepsilon(i_j)$ is its sign.
@@ -396,7 +396,7 @@ So if $\bfi$ has $n$ letters at level $x$, there are $n+1$ chambers at level $x$
 If $x=|i_j|$, the letter $i_j$ separates $c_x(j-1)$ from $c_x(j)$.
 
 For distinct $x,y\in[1,r]$, let $M_{xy}$ be the set of positions of the letters at levels $x$ and $y$, and for $j\in M_{xy}$ put $\varphi_{xy}(j):=\varepsilon(i_j)$ if $|i_j|=y$ and $\varphi_{xy}(j):=-\varepsilon(i_j)$ if $|i_j|=x$.
-Let $\tB(\bfi)=(b_{k\ell})$ be the matrix with rows labelled by $C(\bfi)$ and columns by the $\bfi$-exchangeable chambers, where
+Let $\tB(\bfi)=(b_{k\ell})$ be the matrix with rows labeled by $C(\bfi)$ and columns by the $\bfi$-exchangeable chambers, where
 \begin{equation}
   \label{eq: B entries}
   b_{k\ell}=
@@ -460,7 +460,7 @@ A commutation replaces no chamber. A sign swap, resp.\ a braid move of length $3
 \begin{lemma}
   \label{lem: commutation}
   Let $\bfi'$ be obtained from $\bfi$ by a commutation.
-  Then the correspondence of chambers is a bijection $C(\bfi)\to C(\bfi')$ which preserves levels and exchangeability, and $\tB(\bfi')$ is obtained from $\tB(\bfi)$ by relabelling rows and columns along it.
+  Then the correspondence of chambers is a bijection $C(\bfi)\to C(\bfi')$ which preserves levels and exchangeability, and $\tB(\bfi')$ is obtained from $\tB(\bfi)$ by relabeling rows and columns along it.
 \end{lemma}
 \begin{proof}
   Let the commutation swap the letters at positions $j,j+1$, with levels $x\neq y$.
@@ -525,7 +525,7 @@ The coordinate \cite[Definition~3.20]{SW21} of $k=c_x(s)$ is $\Delta_{\varpi_x,\
 
 \subsection{The BD word seeds}
 \label{sec: model seeds}
-The coloured parts of \cref{fig: Sp6 word seed} illustrate the following definition.
+The colored parts of \cref{fig: Sp6 word seed} illustrate the following definition.
 Fix an aperiodic BD pair $\gamma$ of $\mcG$ and a double reduced word $\bfi$, i.e.\ a reduced word for $(w_0,w_0)$, and call the elements of $\Gamma_r$ and of $\Gamma_c$ \newword{row roots} and \newword{column roots}.
 
 \begin{definition}
@@ -824,9 +824,9 @@ In this case $h_\gamma$ is the identity and there are no thawed chambers, so $\S
       for $\mcG=Sp_6$ and
       $\gamma=(\{1\to2\},0)$ in \cref{ex: Sp6}.
       The vertical segment at position $j$ represents the letter $i_j$ at level
-      $x=|i_j|$ and, for $j\in[1,18]$, is labelled by its root; below each chamber name are its row
+      $x=|i_j|$ and, for $j\in[1,18]$, is labeled by its root; below each chamber name are its row
       and column weights $\lambda^\rr,\lambda^\cc$.
-      On the horizontal line labelled $M_{xy}$
+      On the horizontal line labeled $M_{xy}$
       bullets and circles depict the values $\varphi_{xy}(j)=1$ and
       $\varphi_{xy}(j)=-1$, respectively.
       The marked positions give $M_{12}$ and $M_{23}$ for the original word,
@@ -928,9 +928,9 @@ For a BD pair $\gamma$ let $\gamma^T:=(\gamma_c,\gamma_r)$; by \cref{lem: mirror
 \begin{lemma}
   \label{lem: mirror}
   \begin{enumerate}[(a)]
-    \item For every word $\bfi$, $k\mapsto k^T$ is a bijection $C(\bfi)\to C(\bfi^T)$ which preserves levels and exchangeability, and $\tB(\bfi^T)$ is obtained from $\tB(\bfi)$ by relabelling rows and columns along it.
+    \item For every word $\bfi$, $k\mapsto k^T$ is a bijection $C(\bfi)\to C(\bfi^T)$ which preserves levels and exchangeability, and $\tB(\bfi^T)$ is obtained from $\tB(\bfi)$ by relabeling rows and columns along it.
     \item For a double reduced word $\bfi$, under these identifications the inversion letters, thawed chambers and exponents of the row roots of $\gamma$ in $\bfi$ become those of the column roots of $\gamma^T$ in $\bfi^T$, and conversely, and $(\bfi^\gamma)^T=(\bfi^T)^{\gamma^T}$ up to translation.
-    The matrix $\tB_{\gamma^T}(\bfi^T)$ is obtained from $\tB_\gamma(\bfi)$ by relabelling rows and columns along $k\mapsto k^T$, and $\Phi_{\gamma^T}(k^T;\bfi^T)=\Phi_\gamma(k;\bfi)\circ T$ for every chamber $k$, $T$ being the transpose.
+    The matrix $\tB_{\gamma^T}(\bfi^T)$ is obtained from $\tB_\gamma(\bfi)$ by relabeling rows and columns along $k\mapsto k^T$, and $\Phi_{\gamma^T}(k^T;\bfi^T)=\Phi_\gamma(k;\bfi)\circ T$ for every chamber $k$, $T$ being the transpose.
     \item If $h_\gamma$ is birational, so is $h_{\gamma^T}$, and $x_{\gamma^T}(k^T)=x_\gamma(k)\circ T$.
   \end{enumerate}
 \end{lemma}
@@ -946,7 +946,7 @@ We first compare the exchange matrices under reversal, then follow the weights, 
   So the weights of $k^T$ are those of $k$ in the opposite order, $\Delta(k^T;\bfi^T)=\Delta(k;\bfi)\circ T$ by \cref{sec: Lie}, and $e^\rr_a(k)$ for $\gamma$ equals $e^\cc_a(k^T)$ for $\gamma^T$, and conversely.
   The inversion letters correspond, as $u_{\le j-1}(\bfi)=v_{>L+1-j}(\bfi^T)$, and so do the thawed chambers, as $k\mapsto k^T$ swaps initial and final chambers.
   The virtual letters of $\bfi^\gamma$ go to those of $(\bfi^T)^{\gamma^T}$, in the required order, which gives $(\bfi^\gamma)^T=(\bfi^T)^{\gamma^T}$ up to translation, compatibly with the identifications of chambers.
-  Finally, for a position $m$ of $\bfi$ and $m'=L+1-m$, $c_x(m-1)^T=c_x(m')$ and $c_x(m)^T=c_x(m'-1)$, so $D_{\gamma^T}(\bfi^T)$ is $D_\gamma(\bfi)$ relabelled by $k\mapsto k^T$. With (a) applied to $\bfi^\gamma$, this gives the claim on $\tB$, and \eqref{eq: Phi} gives the claim on $\Phi$.
+  Finally, for a position $m$ of $\bfi$ and $m'=L+1-m$, $c_x(m-1)^T=c_x(m')$ and $c_x(m)^T=c_x(m'-1)$, so $D_{\gamma^T}(\bfi^T)$ is $D_\gamma(\bfi)$ relabeled by $k\mapsto k^T$. With (a) applied to $\bfi^\gamma$, this gives the claim on $\tB$, and \eqref{eq: Phi} gives the claim on $\Phi$.
   (c) follows from (b) and \cref{lem: h transpose}.
 \end{proof}
 
@@ -1179,7 +1179,7 @@ For a seed $(\bx,\tB)$ and an exchangeable index $\ell$ let $\hat y_\ell:=\prod_
   \end{tikzpicture}
   \caption{The moves in the proof of \cref{thm: moves}, starting at the position $p$, with the chambers named as in the proof:
     the sign swap $(-x,x)\to(x,-x)$, and the braid moves $(x,y,x)\to(y,x,y)$ and $(x,y,x,y)\to(y,x,y,x)$.
-    Above each letter are its position and its value; the coloured letters are those that can be inversion letters, and each is drawn in the same colour as the inversion letter it becomes after the move.}
+    Above each letter are its position and its value; the colored letters are those that can be inversion letters, and each is drawn in the same color as the inversion letter it becomes after the move.}
   \label{fig: moves}
 \end{figure}
 
@@ -1225,9 +1225,9 @@ It remains to account for the dipoles and any change in that order.
   \emph{Dipoles.}
   If no inversion letter is a letter of the move, no dipole entry involves $k$, the inversion letters, the chambers they separate and the order of the virtual letters do not change, and $\mu_k(\tB_\gamma(\bfi))=\mu_k(\tB(\bfi^\gamma)_P)+D_\gamma(\bfi)=\tB_\gamma(\bfi')$.
   Otherwise, as no dipole entry cancels an entry of $\tB(\bfi)$ in the column $k$, the corrections in the mutation rule split into those of $\tB(\bfi^\gamma)_P$ and those involving a dipole entry at $k$. The latter change the columns $t_a$ of the roots $a$ with $m_a$ in the move as follows, which gives $D_\gamma(\bfi')$.
-  In \cref{fig: moves} each inversion letter of the move has the colour of the inversion letter it becomes in $\bfi'$.
+  In \cref{fig: moves} each inversion letter of the move has the color of the inversion letter it becomes in $\bfi'$.
   For a column root $b$ in the sign swap, the column $t_b$ of the correction has entries $-1$ at $k$ and $1$ at $k_+$.
-  It becomes the column with $1$ at $k'$ and $-1$ at $k_-$, the entry at $k_+$ cancelling.
+  It becomes the column with $1$ at $k'$ and $-1$ at $k_-$, the entry at $k_+$ canceling.
   Indeed in $\bfi'$, $m_b=p$, $c_x(p-1)=k_-$ and $c_x(p)=k'$.
   In the braid move, if $m_b=p+2$, the column $t_b$, with $-1$ at $k$ and $1$ at $k_+$, becomes the column with $1$ at $k'$ and $-1$ at $\ell_-$, and in $\bfi'$, $m_b=p$, $c_y(p-1)=\ell_-$ and $c_y(p)=k'$.
   If $m_b=p$, the column $t_b$, with $-1$ at $k_-$ and $1$ at $k$, becomes the column with $-1$ at $k'$ and $1$ at $\ell_+$, and in $\bfi'$, $m_b=p+2$, $c_y(p+1)=k'$ and $c_y(p+2)=\ell_+$.
@@ -1266,7 +1266,7 @@ There is at most one relevant dipole, so its correction can be followed explicit
 We identify the possible inversion letters in the move and exclude cancellation with the ordinary matrix at either replaced chamber.
 
   The roots of the letters at $p,p+1,p+2,p+3$ are $v(\alpha_x)$, $v(\alpha_x+\alpha_y)$, $v(\alpha_x+2\alpha_y)$ and $v(\alpha_y)$, and only the first and the last can be simple, the others being sums of two of these positive roots.
-  So the only roots whose inversion letter is a letter of the move are column roots $b$ with $m_b=p$ or $m_b=p+3$, coloured in \cref{fig: moves}.
+  So the only roots whose inversion letter is a letter of the move are column roots $b$ with $m_b=p$ or $m_b=p+3$, colored in \cref{fig: moves}.
   There is at most one such root: otherwise $\gamma_c$ would map two simple roots joined by a double bond to the simple roots $v(\alpha_x)$, $v(\alpha_y)$, also joined by a double bond.
   As $\gamma_c$ is an isometry and $\mcG$ has only one such pair, $\gamma_c$ would permute it, contradicting nilpotency.
   In particular the move does not change the order of the virtual letters, and the dipole entries at $k$ and $\ell$ are those of $D_b$.
@@ -1769,8 +1769,8 @@ The reader can follow along by comparing \cref{fig: GSV23 word seed} with \cite[
 \endgroup
     \par\medskip
     \caption[The extended word $\bfi_{\rm GSV}^\gamma$ for the running example of GSV23]{%
-      The extended word $\bfi_{\rm GSV}^\gamma$ for the running example of \cite{GSV23}, that is $\mcG=SL_7$ and $\gamma=(\{1\to4,2\to3,5\to1\},\{2\to3,3\to4,5\to6\})$, with chambers labelled by $\psi$ and $\tB_\gamma(\bfi_{\rm GSV})$ drawn as a quiver.
-      The conventions are those of \cref{fig: Sp6 word seed}, with one colour for each root of $\gamma$; compare with \cite[Figure~6]{GSV23}.}
+      The extended word $\bfi_{\rm GSV}^\gamma$ for the running example of \cite{GSV23}, that is $\mcG=SL_7$ and $\gamma=(\{1\to4,2\to3,5\to1\},\{2\to3,3\to4,5\to6\})$, with chambers labeled by $\psi$ and $\tB_\gamma(\bfi_{\rm GSV})$ drawn as a quiver.
+      The conventions are those of \cref{fig: Sp6 word seed}, with one color for each root of $\gamma$; compare with \cite[Figure~6]{GSV23}.}
     \label{fig: GSV23 word seed}
 \end{figure}
 
@@ -2343,7 +2343,7 @@ We compute the fold of $\Sigma_{\tg}(\tbfi)$ in two steps: \cref{lem: index mino
 
   Suppose now that $a_{xy}\neq0$ and $x\neq y$.
   Only the chambers $\widetilde{k}$ at levels $\widetilde{x}\in\{x,\tau(x)\}$ adjacent to $\widetilde{y}$ can contribute.
-  Restricting $\bfj$ to the levels $x,y$ and its lift to $\widetilde{x},\widetilde{y}$ gives the same signed sequence after relabelling, with $k,\ell$ corresponding to $\widetilde{k},\widetilde{\ell}$.
+  Restricting $\bfj$ to the levels $x,y$ and its lift to $\widetilde{x},\widetilde{y}$ gives the same signed sequence after relabeling, with $k,\ell$ corresponding to $\widetilde{k},\widetilde{\ell}$.
   The third case of \eqref{eq: B entries} therefore gives the same entry, except that the factor $-a_{xy}$ is replaced by $1$.
   There are exactly $-a_{xy}$ such levels $\widetilde{x}$: two, $n-1$ and $n+1$, if $(x,y)=(n-1,n)$, and one otherwise.
   The claim follows by summing these contributions.
@@ -2605,7 +2605,7 @@ For $\Xi=\sum_m\xi_m\otimes\eta_m\in\bigwedge^2\mfh_\gamma$ let $\mcV_\Xi(f,g):=
 
 \begin{remark}
   \label{rmk: v}
-  By \cref{thm: uniqueness}, a compatible bracket with $c\neq0$ is a multiple of a bracket $\{\cdot,\cdot\}_{\gamma,s'}$, as in \cite[Theorem~3.3(v)]{GSV19}, exactly when $\Xi_{\rm rc}=0$.
+  By \cref{thm: uniqueness}, a compatible bracket with $c\neq0$ is a multiple of a bracket in (iv) of the introduction exactly when $\Xi_{\rm rc}=0$.
   Mixed terms exist for every pair, as $\dim\mfh_{\gamma_\bullet}=|\Gamma|-|\Gamma_\bullet|\ge1$; they correspond to the term $V_{12}$ in \cite[Section~4]{GSV11}.
   For instance, for $\gamma=(0,0)$ on $SL_2$ and $\Xi=\alpha_1^\vee\otimes\alpha_1^\vee\in\mfh_{\gamma_r}\otimes\mfh_{\gamma_c}$, the bracket $\mcV_\Xi$ gives $\{x_{11},x_{12}\}=-2x_{11}x_{12}$ and $\{x_{11},x_{22}\}=0$, so it is not a multiple of the standard bracket.
 
