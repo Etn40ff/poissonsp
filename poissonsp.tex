@@ -316,7 +316,7 @@ The map $h_\gamma:\mcG\dashrightarrow\mcG$ is
   H_c(U)=\boldsymbol\gamma_c(\overline{V}_c)\,\boldsymbol\gamma_c^2(\overline{V}_c)\cdots,
 \end{equation}
 where the products are finite because $\gamma_r$ and $\gamma_c$ are nilpotent.
-This is the map of \cite[Section~3.1]{GSV23}, defined there for every simple $\mcG$, with the exception that the factors of $H_c$ appear there in the opposite order (see \cref{rmk: Hc order}).
+This is the map of \cite[Section~3.1]{GSV23}, defined there for every simple $\mcG$.
 For $\Sp$ we study the map $h_\gamma$ in \cref{prop: h theta}.
 
 \begin{lemma}
@@ -330,14 +330,6 @@ For $\Sp$ we study the map $h_\gamma$ in \cref{prop: h theta}.
   Transposing the factorizations of $U^T$ for $(\gamma_c,\gamma_r)$ therefore gives those of $U$ for $(\gamma_r,\gamma_c)$.
   Thus $H_c(U)$, resp.\ $H_r(U)$, is the transpose of $H_r(U^T)$, resp.\ $H_c(U^T)$, computed for $(\gamma_c,\gamma_r)$.
 \end{proof}
-
-\begin{remark}
-  \label{rmk: Hc order}
-  In \cite[Section~3.1]{GSV23} the factor $H_c$ is written as $\cdots\boldsymbol\gamma_c^2(\overline{V}_c)\boldsymbol\gamma_c(\overline{V}_c)$.
-  This is a misprint: with that order $h_\gamma$ is not Poisson already for $SL_4$, $\gamma_r=0$ and $\gamma_c=\{1\to2\to3\}$.
-  The order in \eqref{eq: h} is the one compatible with \cref{lem: h transpose} and required by the derivation of \cite[(4.2)]{GSV23} from \cite[Proposition~4.6]{GSV23}, and the arguments of \cite{GSV23} apply to it.
-  Indeed, that derivation uses $N_-=(\overline{V}_cH_c)^{-1}$, and so needs $H_c=\boldsymbol\gamma_c(\overline{V}_cH_c)$, which holds for the order in \eqref{eq: h} but not for the reversed one; similarly $H_r=\boldsymbol\gamma_r(H_r\overline{V}_r)$.
-\end{remark}
 
 \begin{definition}[{\cite[Section~4.1]{GSV23}}]
   \label{def: aperiodic}
@@ -1829,7 +1821,7 @@ We compute the chamber minors and their exponents, which reproduce the recursion
     \pi_{N-g}=\begin{cases}F_{1,b+1}\pi_{-b}&g=\gamma_c(b),\\1&g\notin\gamma_c(\Gamma_c).
     \end{cases}
   \end{equation}
-  This recursion terminates by \cref{lem: tails}, and by \cite[Theorem~4.4, (4.1), and (4.6)]{GSV23}, with the column convention of \cref{rmk: Hc order}, the cluster variables $f_{ij}$ of the initial seed of \cite[Theorem~4.11]{GSV23} satisfy $f_{ij}\circ h_\gamma=F_{ij}\pi_{i-j}$.
+  This recursion terminates by \cref{lem: tails}, and by \cite[Theorem~4.4, (4.1), and (4.6)]{GSV23}, the cluster variables $f_{ij}$ of the initial seed of \cite[Theorem~4.11]{GSV23} satisfy $f_{ij}\circ h_\gamma=F_{ij}\pi_{i-j}$.
   So $x_\gamma(k)=f_{\psi(k)}$.
 
   \emph{The exchange matrix.}
