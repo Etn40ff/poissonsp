@@ -235,7 +235,7 @@ For $SL_N$ with the standard pinning these are the minors of the matrix $U$ (\cr
 The generalized minor depends only on the weights $u\varpi_i$ and $v\varpi_i$.
 Let $U\mapsto U^T$ be the anti-involution of $\mcG$ whose differential swaps $E_i$ and $F_i$ and fixes $\mfh$; for $SL_N$ it is the transpose.
 Then $\overline{w}^{\,T}=\overline{w}^{\,-1}$, so $\Delta_{u\varpi_i,v\varpi_i}(U^T)=\Delta_{v\varpi_i,u\varpi_i}(U)$.
-A function $f$ on $\mcG$ is \newword{$\mcH$-homogeneous of bidegree} $(\lambda,\mu)$ if $f(y_{\rr}Uy_{\cc})=y_{\rr}^\lambda y_{\cc}^\mu f(U)$ for $y_{\rr},y_{\cc}\in\mcH$; for instance $\Delta_{u\varpi_i,v\varpi_i}$ has bidegree $(u\varpi_i,v\varpi_i)$.
+A function $f$ on $\mcG$ is \newword{$\mcH$-homogeneous of bidegree} $(\lambda^\rr,\lambda^\cc)$ if $f(y_{\rr}Uy_{\cc})=y_{\rr}^{\lambda^\rr}y_{\cc}^{\lambda^\cc}f(U)$ for $y_{\rr},y_{\cc}\in\mcH$; for instance $\Delta_{u\varpi_i,v\varpi_i}$ has bidegree $(u\varpi_i,v\varpi_i)$.
 
 \subsection{Belavin--Drinfeld data and Poisson brackets}
 \label{sec: BD}
@@ -2588,8 +2588,8 @@ For $\Xi=\sum_u\xi_u\otimes\eta_u\in\bigwedge^2\mfh_\gamma$ let $\toric_\Xi(f,g)
 
   \emph{Changing the Cartan data.}
   For $s'_{\rr}\in\mcS(\gamma_{\rr})$ we have $s'_{\rr}-s_{\rr}\in\mfh_{\gamma_{\rr}}\wedge\mfh_{\gamma_{\rr}}$, as $\mcS(\gamma_{\rr})=s_{\rr}+\mfh_{\gamma_{\rr}}\wedge\mfh_{\gamma_{\rr}}$ (\cref{sec: BD}).
-  Replacing $s_{\rr}$ by $s'_{\rr}$ changes $\{f,g\}_{\gamma,s}$ by $-(\lambda\otimes\lambda')(s'_{\rr}-s_{\rr})fg$ for $f,g$ of bidegrees $(\lambda,\mu)$, $(\lambda',\mu')$, by \eqref{eq: bracket}, i.e.\ it adds $\toric_{s_{\rr}-s'_{\rr}}$, with $s_{\rr}-s'_{\rr}$ regarded as an element of $\bigwedge^2\mfh_{\gamma_{\rr}}\subseteq\bigwedge^2\mfh_\gamma$.
-  Similarly, replacing $s_{\cc}$ by $s'_{\cc}\in\mcS(\gamma_{\cc})$ adds $\toric_{s_{\cc}-s'_{\cc}}$, as $s_{\cc}$ enters $r_\cc$ through the factor swap.
+  For $f,g$ of bidegrees $(\lambda^\rr_f,\lambda^\cc_f)$, $(\lambda^\rr_g,\lambda^\cc_g)$, replacing $s_{\rr}$ by $s'_{\rr}$ changes $\{f,g\}_{\gamma,s}$ by $-(\lambda^\rr_f\otimes\lambda^\rr_g)(s'_{\rr}-s_{\rr})fg$, by \eqref{eq: bracket}, i.e.\ it adds $\toric_{s_{\rr}-s'_{\rr}}$, with $s_{\rr}-s'_{\rr}$ regarded as an element of $\bigwedge^2\mfh_{\gamma_{\rr}}\subseteq\bigwedge^2\mfh_\gamma$.
+  Similarly, replacing $s_{\cc}$ by $s'_{\cc}\in\mcS(\gamma_{\cc})$ changes it by $-(\lambda^\cc_f\otimes\lambda^\cc_g)(s'_{\cc}-s_{\cc})fg$, as $s_{\cc}$ enters $r_\cc$ through the factor swap, i.e.\ it adds $\toric_{s_{\cc}-s'_{\cc}}$.
   Thus $\{\cdot,\cdot\}_{\gamma,s'}=\{\cdot,\cdot\}_{\gamma,s}+\toric_{s-s'}$ for $s,s'\in\mcS(\gamma)$, with $s-s'=(s_{\rr}-s'_{\rr},s_{\cc}-s'_{\cc})\in\bigwedge^2\mfh_{\gamma_{\rr}}\oplus\bigwedge^2\mfh_{\gamma_{\cc}}\subseteq\bigwedge^2\mfh_\gamma$.
 
   \emph{The brackets are Poisson and compatible.}
